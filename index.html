@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laboratório dos Elementos Perdidos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Laboratório dos Elementos Perdidos</h1>
+  <p>Clique nos setores para explorar e resolver mistérios científicos.</p>
+
+  <!-- Exibição da Pontuação -->
+  <div id="scoreboard">
+    <span>Pontuação: <span id="score">0</span></span>
+  </div>
+
+  <!-- Personagem: Professor Elemento -->
+  <div id="character">
+    <img src="professor.png" alt="Professor Elemento">
+    <div id="character-dialog">Bem-vindo, jovem cientista! Clique em um setor para começar!</div>
+  </div>
+
+  <!-- Container do Laboratório -->
+  <div id="laboratory">
+    <!-- Setor de Química -->
+    <div class="sector" id="chemistry-sector">
+      <h2>Química</h2>
+      <button onclick="startPuzzle('chemistry')">Explorar Química</button>
+    </div>
+    <!-- Setor de Física -->
+    <div class="sector" id="physics-sector">
+      <h2>Física</h2>
+      <button onclick="startPuzzle('physics')">Explorar Física</button>
+    </div>
+    <!-- Setor de Biologia -->
+    <div class="sector" id="biology-sector">
+      <h2>Biologia</h2>
+      <button onclick="startPuzzle('biology')">Explorar Biologia</button>
+    </div>
+  </div>
+
+  <!-- Caixa de Diálogo para Interação -->
+  <div id="dialog-box">
+    <h3 id="dialog-title">Bem-vindo ao Laboratório!</h3>
+    <p id="dialog-content">Clique em uma das seções para começar.</p>
+    <div id="choices"></div>
+    <button onclick="closeDialog()">Fechar</button>
+  </div>
+
+  <!-- Áudio para Efeitos Sonoros -->
+  <audio id="click-sound" src="click.mp3"></audio>
+  <audio id="success-sound" src="success.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
