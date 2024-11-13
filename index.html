@@ -17,7 +17,7 @@
 
   <!-- Personagem: Professor Elemento -->
   <div id="character">
-    <img src="professor.png" alt="Professor Elemento">
+    <img class="sandro" src="../projeto-feira/imagem/New Piskel (1).gif" alt="Professor Elemento">
     <div id="character-dialog">Bem-vindo, jovem cientista! Clique em um setor para começar!</div>
   </div>
 
@@ -47,10 +47,16 @@
     <div id="choices"></div>
     <button onclick="closeDialog()">Fechar</button>
   </div>
-
-  <!-- Áudio para Efeitos Sonoros -->
-  <audio id="click-sound" src="click.mp3"></audio>
-  <audio id="success-sound" src="success.mp3"></audio>
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+    </div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
 
   <script src="script.js"></script>
 </body>
